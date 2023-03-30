@@ -42,3 +42,17 @@ func addTagView(_ view: UIView)
 func removeTagView(_ view: UIView)
 ```
 These two functions should be used to manage `tags` rather than `addSubview` and `removeFromSuperview`.
+
+
+**!!!!!!**
+For `TagListView` to layout properly its width must be constrainted horizontally (either by Auto Layout or setting the frame's width).
+
+## Installation
+
+### Swift Package Manager
+
+This repository is ready as a package for SPM.
+
+### Manually
+
+Just drag `Sources/TagListView/TagListView.swift` to your project and it's all done.
