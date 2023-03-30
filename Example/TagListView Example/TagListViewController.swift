@@ -12,18 +12,12 @@ import TagListView
 
 
 class TagListViewController: UIViewController {
-    @IBOutlet var scrollContentView: UIView!
-    private let tagListView = TagListView()
-    
-    private let tagListView2 = TagListView()
+    @IBOutlet var tagListView: TagListView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollContentView.addSubview(tagListView)
-        
         tagListView.do {
-            $0.edgesToSuperview()
             $0.backgroundColor = .systemRed.withAlphaComponent(0.1)
         }
     }
