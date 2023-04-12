@@ -44,8 +44,11 @@ func removeTagView(_ view: UIView)
 These two functions should be used to manage `tags` rather than `addSubview` and `removeFromSuperview`.
 
 
-**!!!!!!**
-For `TagListView` to layout properly its width must be constrainted horizontally (either by Auto Layout or setting the frame's width).
+### Remarks
+For `TagListView` to layout properly its width must be constrainted horizontally by
+- Setting a width constraint equal to a constant.
+- Setting left and right constraints with 'equal' relation. 
+- Setting the frame's width directly.
 
 ## Installation
 
