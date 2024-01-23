@@ -57,27 +57,38 @@ public class TagListView: UIView {
     /// How the children within a row should be placed in the main axis.
     public var alignment: Alignment = .start {
         didSet {
+            if oldValue == alignment { return }
+            
             invalidateIntrinsicContentSize()
             setNeedsLayout()
         }
     }
+
     /// How the children within a row should be aligned relative to each other in the cross axis.
     public var crossAxisAlignment: Alignment = .start {
         didSet {
+            if oldValue == crossAxisAlignment { return }
+            
             invalidateIntrinsicContentSize()
             setNeedsLayout()
         }
     }
+
     /// How much space to place between children in a row in the main axis.
     public var spacing: CGFloat = 0 {
         didSet {
+            if oldValue == spacing { return }
+            
             invalidateIntrinsicContentSize()
             setNeedsLayout()
         }
     }
+
     /// How much space to place between the rows themselves in the cross axis.
     public var rowSpacing: CGFloat = 0 {
         didSet {
+            if oldValue == rowSpacing { return }
+            
             invalidateIntrinsicContentSize()
             setNeedsLayout()
         }
